@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Roboto+Mono&family=Russo+One&family=Secular+One&family=Source+Code+Pro&display=swap');
+
+*{
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+body{
+  background: #f3f5fb;
+  transition: 0.3s;
+  height: 100vh;
+}
+
+#container {
+    margin-top: 50px;
+    margin-left: 200px;
+}
+
+.dog-head {
+  z-index: 100;
+  animation: head-move 1s ease-in-out infinite;
+}
+
+.dog-body {
+  height: 300px;
+  width: 225px;
+  margin-top: -175px;
+  margin-left: 40px;
+  background-image: url('http://www.clker.com/cliparts/T/0/9/J/e/4/dog-body-md.png');
+  background-repeat: no-repeat;
+}
+
+
+.pet{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin-left: -180px;
+  margin-top: -100px;
+}
+/*ANIMATIONS
+---------------------------------------------------------*/
+
+@keyframes head-move {
+  50% { 
+    -webkit-transform: rotate(-1.5deg); 
+  }
+}
+
+/* dark mode */
+.dark{
+  background: #292C35;
+}
+.theme{
+  display: flex;
+  justify-content: flex-end;
+  margin-top: -100px;
+  margin-right: 40px;
+}
+.btn{
+  height: 60px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background-color: transparent;
+  transition: 0.3s;
+}
+
+.btn:hover{
+  transform: rotate(30deg);
+  transition: 0.3s;
+}
+
+
+/* titlu */
+.title{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.titlu{
+  font-family: 'Fredoka One';
+  font-size: 3.3rem;
+  letter-spacing: 2px;
+  font-weight: lighter;
+}
+
+/* dog buttons */
+.buttons{
+  margin-top: -200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.dogBtn{
+  margin-right: 40px;
+
+  outline: none;
+  border: none;
+
+  width: 150px;
+  height: 60px;
+  border-radius: 50px;
+  background-color: #fff;
+
+  font-family: 'Fredoka One';
+  font-size: 1.5rem;
+}
+
+.dogBtn:hover {
+  animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+  transform: translate3d(0, 0, 0);
+}
+
+@keyframes shake {
+  10%, 90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+  20%, 80% {
+    transform: translate3d(2px, 0, 0);
+  }
+  30%, 50%, 70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+  40%, 60% {
+    transform: translate3d(4px, 0, 0);
+  }
+}
+
+/* bubble */
+
+blockquote.bubble { 
+  background-position: center;
+  background-repeat: no-repeat !important;
+  background-size: 100% 100%;
+  margin: 0 auto;
+  text-align: center;
+  height: 0;
+  box-sizing: content-box;
+
+  position: absolute;
+  top: 20%;
+  left: 10%;
+}
+blockquote.electric {
+  background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/electric.svg); 
+  width: 25%;
+  font-size: 2.4rem;
+  padding: 4% 6% 12% 0%;
+}
+
+.bubbleOn{
+  display: none;
+}
+
+
+#greetUser{
+  font-family: 'Fredoka One';
+  font-size: 3rem;
+  display: flex;
+  justify-content: flex-start;
+  margin-left: 90px;
+}
+
+#barkText{
+  font-family: 'Fredoka One';
+  font-size: 2.3rem;
+  display: flex;
+  justify-content: flex-start;
+  margin-left: 60px;
+  margin-top: -60px;
+}
+
+#jokeText{
+  font-family: 'Fredoka One';
+  font-size: 1.7rem;
+  display: flex;
+  justify-content: flex-start;
+  margin-left: 30px;
+  margin-top: -40px;
+}
